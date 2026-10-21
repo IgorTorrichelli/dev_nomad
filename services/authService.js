@@ -37,7 +37,7 @@ class AuthService {
     async updateProfile(displayName, photoURL) {
         try {
             if (!this.auth.currentUser) {
-                throw new Error('Update de usários não são permitidos por contas de terceiros')
+                throw new Error('Update de usuários não são permitidos por contas de terceiros')
             }
             await updateProfile(this.auth.currentUser, { displayName, photoURL })
             return this.auth.currentUser
